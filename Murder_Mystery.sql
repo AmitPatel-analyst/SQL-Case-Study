@@ -62,10 +62,10 @@ try to filter the data by plate number that included "H42W"
 */
 
 select	p.Name,p.License_Id,k.Plate_Number
-		from Person as p  join
-						(select * from 
-								[Drivers license] 
-								where [Plate_Number] like '%H42W%') as k
-						on p.License_Id=k.Id;
+		from Person as p join
+					(select * 
+					 	from [Drivers license] 
+						where [Plate_Number] like '%H42W%') as k
+				 on p.License_Id=k.Id;
 
 -- So we knew that the MasterMind person who did murder is "Jeremy Bowers".
