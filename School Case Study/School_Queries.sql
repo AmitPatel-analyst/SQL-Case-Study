@@ -15,10 +15,10 @@ go
 --CourseMaster
 create table CourseMaster
 (
-	CID			    INT			    primary key,
+	CID		INT 		primary key,
 	CourseName	Varchar(40)	not null,
-	Category	  char(1)		  null		check (Category = 'B' or Category = 'M' or Category = 'A'),
-	Fee			    smallmoney	not null	check (Fee > 0)
+	Category	char(1)       	null	check (Category = 'B' or Category = 'M' or Category = 'A'),
+	Fee		smallmoney	not null	check (Fee > 0)
 
 )
 go
@@ -48,15 +48,15 @@ insert into CourseMaster values(140,'Azure','B', 35000)
 insert into CourseMaster values(150,'Microsoft Office Intermediate','B', 22000)
 
 select * from CourseMaster
-go
+go           -- TOTAL 15 RECORDS
 
 -- StudentMaster Table create
 create table StudentMaster
 (
-	SID		  TINYINT		  PRIMARY KEY,
-	Name	  Varchar(40)	not null,
+	SID	TINYINT		  PRIMARY KEY,
+	Name	Varchar(40)	not null,
 	Origin	Char(1)		  not null	check (Origin = 'L' or Origin = 'F'),
-	Type	  Char(1)		  not null	check (Type = 'U' or Type = 'G')
+	Type	Char(1)		  not null	check (Type = 'U' or Type = 'G')
 )
 go
 
@@ -87,16 +87,16 @@ insert into StudentMaster values(20, 'Pooja','L','U')
 
 --Read the table data
 select * from StudentMaster
-go
+go        -- TOTAL 20 RECORDS
 
 -- EnrollmentMaster Table
 create table EnrollmentMaster
 (
-	CID			INT			not	null	foreign key References CourseMaster(CID),
-	SID			TINYINT		not	null	foreign key References StudentMaster(SID),
-	DOE			Datetime	not null,
-	FWF			Bit			not null,
-	Grade		Char(1)		null		check(Grade ='O' or Grade ='A' or Grade ='B' or Grade ='C')
+	CID	INT	 not null foreign key References CourseMaster(CID),
+	SID	TINYINT	 not null foreign key References StudentMaster(SID),
+	DOE	Datetime not null,
+	FWF	Bit	 not null,
+	Grade	Char(1)	 null	check(Grade ='O' or Grade ='A' or Grade ='B' or Grade ='C')
 
 	)
 	go
@@ -144,5 +144,6 @@ insert into EnrollmentMaster values(40,13,'2021/7/22',0 ,'B')
 go
 
 --Read the table data
-	select * from EnrollmentMaster
-	go
+select * from EnrollmentMaster
+go     -- TOTAL 38 RECORDS
+
