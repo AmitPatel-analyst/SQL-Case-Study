@@ -147,3 +147,7 @@ go
 select * from EnrollmentMaster
 go     -- TOTAL 38 RECORDS
 
+UPDATE EnrollmentMaster
+SET DOE='2022-09-12'
+WHERE DOE >'2021-05-01'
+
