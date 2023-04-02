@@ -21,12 +21,12 @@ go
 
 
 --insert
-/*
+
 insert into ProductMaster values('SB','Savings Bank')
 insert into ProductMaster values('LA','Loan Account')
 insert into ProductMaster values('FD','Fixed Deposit')
 insert into ProductMaster values('RD','Recurring Deposit')
-*/
+
 
 -- read the data
 select * from ProductMaster
@@ -41,12 +41,12 @@ create table RegionMaster
 go
 
 --insert
-/*
+
 insert into RegionMaster values(1,'South')
 insert into RegionMaster values(2,'North')
 insert into RegionMaster values(3,'East')
 insert into RegionMaster values(4,'West')
-go*/
+go
 
 --read the data
 
