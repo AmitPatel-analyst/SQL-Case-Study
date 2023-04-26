@@ -113,11 +113,13 @@ WHERE UserID IN (1,3);
 ```
 ![image](https://user-images.githubusercontent.com/120770473/229337103-b86d825f-8007-45e3-8142-01544bf4fb43.png)
 
-Q.6 Provide the following information from the ‘Account Master’ table:
-	Product-wise, month-wise, number of accounts
-	Total number of accounts for each product
-	Total number of accounts for each month
-	Total number of accounts in our bank
+Q.6 Provide the following information from the ‘Account Master’ table:   
+a) Product-wise, month-wise, number of accounts   
+b) Total number of accounts for each product   
+c) Total number of accounts for each month   
+d) Total number of accounts in our bank   
+
+		
 ```sql
 SELECT PID,DATENAME(MM,DOO) AS MONTH_NM ,count(distinct ACID) as Nos_acc
 FROM ACCOUNTMASTER
