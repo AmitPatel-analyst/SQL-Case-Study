@@ -90,16 +90,16 @@ ORDER BY	order_count DESC;
 with cte_order_count as
 (
 select  s.customer_id,
-		m.product_name,
-		count(*) as order_count
-		from sales as s
-		join menu as m
-		on s.product_id = m.product_id 
-group by s.customer_id,m.product_name
+	m.product_name,
+	count(*) as order_count
+from 	   sales as s
+inner join menu as m
+on 	   s.product_id = m.product_id 
+group by   s.customer_id,m.product_name
 ),
 cte_popular_rank AS (
   SELECT *,
-		rank() over(partition by customer_id order by order_count desc) as rn
+	rank() over(partition by customer_id order by order_count desc) as rn
   from	cte_order_count )
 
 SELECT customer_id as customer, product_name as food_item,order_count
@@ -166,7 +166,7 @@ WITH cte_first_after_mem AS (
   SELECT 
     customer_id,
     product_name,
-  	order_date,
+    order_date,
     RANK() OVER(PARTITION BY customer_id ORDER BY order_date) AS purchase_order
   FROM #Membership_validation
   WHERE membership = 'X'
@@ -189,7 +189,7 @@ WITH cte_last_before_mem AS (
   SELECT 
     customer_id,
     product_name,
-  	order_date,
+    order_date,
     RANK() OVER( PARTITION BY customer_id ORDER BY order_date DESC) AS purchase_order
   FROM #Membership_validation
   WHERE membership = ''
@@ -239,8 +239,7 @@ ORDER BY customer_id;
 SELECT
   customer_id,
   SUM( CASE 
-			WHEN product_name = 'sushi'	THEN (price * 20)
-				ELSE (price * 10)
+	WHEN product_name = 'sushi' THEN (price * 20) ELSE (price * 10)
 		END
 	) AS total_points
 FROM #Membership_validation
@@ -285,8 +284,8 @@ SELECT s.customer_id,
 FROM				MENU as m
 INNER JOIN			sales as s on m.product_id = s.product_id
 INNER JOIN			program_last_day_cte as k on k.customer_id = s.customer_id
-AND					order_date <='2021-01-31'
-AND					order_date >=join_date
+AND				order_date <='2021-01-31'
+AND				order_date >=join_date
 GROUP BY			s.customer_id
 ORDER BY			s.customer_id;
 ```
@@ -300,4 +299,4 @@ ORDER BY			s.customer_id;
 ***
 
 
-Click [here]([https://github.com/manaswikamila05/8-Week-SQL-Challenge](https://github.com/AmitPatel-analyst/SQL-Case-Study/tree/main/%238Weeksqlchallange)) to move back to the 8-Week-SQL-Challenge repository!
+Click [here]([https://github.com/AmitPatel-analyst/SQL-Case-Study/tree/main/%238Weeksqlchallange]) to move back to the 8-Week-SQL-Challenge repository!
