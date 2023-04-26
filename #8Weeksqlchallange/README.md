@@ -11,6 +11,11 @@ Each case-study folder contains the following files
 **Note**: 
 - Solutions are coded in **MSSQL**
 
+## Challenge case studies
+* 🍜[Case Study #1 - Danny's Diner](https://github.com/AmitPatel-analyst/SQL-Case-Study/tree/main/%238Weeksqlchallange/Case%20Study%20%23%201%20-%20Danny's%20Diner)
+* 🍕[Case Study #2 - Pizza Runner]
+
+
 
 ## Support
 Give a ⭐️ if you like this project!
