@@ -299,4 +299,6 @@ ORDER BY			s.customer_id;
 ***
 
 
-Click [here]([https://github.com/AmitPatel-analyst/SQL-Case-Study/tree/main/%238Weeksqlchallange]) to move back to the 8-Week-SQL-Challenge repository!
+Click [here](https://github.com/AmitPatel-analyst/SQL-Case-Study/tree/main/%238Weeksqlchallange) to move back to the 8-Week-SQL-Challenge repository!
+
+
