@@ -1,4 +1,3 @@
-
 ![crypto (Custom)](https://user-images.githubusercontent.com/120770473/235211571-e15b98e9-8454-4fe7-9b74-82cdf6ff8f21.jpg)
 # Cryptocurrency Case Study
 
@@ -23,3 +22,7 @@ Each case-study folder contains the following files
 
 ## Support
 Give a ⭐️ if you like this project!
+# About the Author: Danny Ma
+
+Danny is the Chief Data Mentor at Data With Danny and the Founder & CEO of Sydney Data Science, a boutique data consultancy based out of Sydney, Australia.
+Danny is a regular speaker at global data conferences, meetups and podcasts where he shares the importance of mentorship for all data professionals. He is also a technical author and instructor for O'Reilly.
