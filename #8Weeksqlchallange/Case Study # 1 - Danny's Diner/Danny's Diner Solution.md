@@ -15,7 +15,9 @@
 ***
 
 ###  1. What is the total amount each customer spent at the restaurant?
-
+<details>
+  <summary>Click here for the solution</summary>
+  
 ```sql
 SELECT s.customer_id AS customer, SUM(m.price) AS spentamount_cust 
 FROM sales s 
@@ -23,6 +25,8 @@ JOIN menu m
 ON s.product_id = m.product_id 
 GROUP BY s.customer_id;
 ```
+</details>
+
 #### Output:
 |customer|spentamount_cust|
 |--------|----------------|
@@ -33,12 +37,16 @@ GROUP BY s.customer_id;
 ***
 
 ###  2. How many days has each customer visited the restaurant?
-
+<details>
+  <summary>Click here for the solution</summary>
+  
 ```sql
 SELECT	customer_id, COUNT(DISTINCT order_date) AS Visit_frequency
 FROM	sales
 GROUP BY customer_id;
 ```
+</details>
+
 #### Output:
 |customer_id|	Visit_frequency|
 |-----------|----------------|
@@ -49,8 +57,10 @@ GROUP BY customer_id;
 ***
 
 ###  3. What was the first item from the menu purchased by each customer?
--- -- Asssumption: Since the timestamp is missing, all items bought on the first day is considered as the first item(provided multiple items were purchased on the first day)
-
+-- Asssumption: Since the timestamp is missing, all items bought on the first day is considered as the first item(provided multiple items were purchased on the first day)
+<details>
+  <summary>Click here for the solution</summary>
+  
 ```sql
 SELECT	s.customer_id AS customer, m.product_name AS food_item
 FROM	sales s
@@ -59,6 +69,8 @@ ON		s.product_id = m.product_id
 WHERE	s.order_date = (SELECT MIN(order_date) FROM sales WHERE customer_id = s.customer_id)
 ORDER BY s.product_id;
 ```
+</details>
+	
 #### Output:
 |customer	|food_item|
 |--------|----------|
@@ -69,7 +81,9 @@ ORDER BY s.product_id;
 ***
 
 ###  4. What is the most purchased item on the menu and how many times was it purchased by all customers?
-
+<details>
+  <summary>Click here for the solution</summary>
+  
 ```sql
 SELECT		TOP 1 m.product_name, COUNT(s.product_id) AS order_count
 FROM		sales s
@@ -77,6 +91,8 @@ JOIN		menu m ON s.product_id=m.product_id
 GROUP BY	m.product_name
 ORDER BY	order_count DESC;
 ```
+</details>
+
 #### Output:
 |product_name|	order_count|
 |------------|-------------|
@@ -85,7 +101,9 @@ ORDER BY	order_count DESC;
 
 ###  5. Which item was the most popular for each customer?
 -- Asssumption: Products with the highest purchase counts are all considered to be popular for each customer
-
+<details>
+  <summary>Click here for the solution</summary>
+  
 ```sql
 with cte_order_count as
 (
@@ -106,6 +124,8 @@ SELECT customer_id as customer, product_name as food_item,order_count
 FROM cte_popular_rank
 WHERE	rn = 1;
 ```
+</details>
+
 #### Output:
 
 | customer_id  | product_name  | order_count  | rank  |
@@ -120,7 +140,9 @@ WHERE	rn = 1;
 
 ###  6. Which item was purchased first by the customer after they became a member?
 -- Before answering question 6, I created a membership_validation table to validate only those customers joining in the membership program:
-
+<details>
+  <summary>Click here for the solution</summary>
+  
 ```sql
 DROP TABLE #Membership_validation;
 CREATE TABLE #Membership_validation
@@ -144,6 +166,8 @@ ORDER BY customer_id, order_date;
 
 select * from #Membership_validation;
 ```
+</details>
+
 #### Temporary Table {#Membership_validation} Output:
 
 |	customer_id| order_date	   | product_name |	price |	join_date    |membership |
@@ -161,6 +185,9 @@ select * from #Membership_validation;
 |	B		|2021-01-16		|	ramen		| 12	|	2021-01-09|		        X|
 |	B		|2021-02-01		|	ramen		 |12		|2021-01-09	|     	  X|
 
+<details>
+  <summary>Click here for the solution</summary>
+  
 ```sql
 WITH cte_first_after_mem AS (
   SELECT 
@@ -174,6 +201,8 @@ WITH cte_first_after_mem AS (
 SELECT * FROM cte_first_after_mem
 WHERE purchase_order = 1;
 ```
+</details>
+
 #### Output:
 |customer_id|	product_name|	order_date|	purchase_order|
 |:---------:|:-----------:|:--------:|:-------------:|
@@ -183,7 +212,9 @@ WHERE purchase_order = 1;
 ***
 
 ###  7. Which item was purchased just before the customer became a member?
-
+<details>
+  <summary>Click here for the solution</summary>
+  
 ```sql
 WITH cte_last_before_mem AS (
   SELECT 
@@ -197,6 +228,8 @@ WITH cte_last_before_mem AS (
 SELECT * FROM cte_last_before_mem 
 WHERE purchase_order = 1;
 ```
+</details>
+
 #### Output:
 |customer_id	|product_name|	order_date	|purchase_order|
 |:---------:|:------------:|:----------:|:-------------:|
@@ -207,7 +240,9 @@ WHERE purchase_order = 1;
 ***
 
 ###  8. What is the total items and amount spent for each member before they became a member?
-
+<details>
+  <summary>Click here for the solution</summary>
+  
 ```sql
 WITH cte_spent_before_mem AS (
   SELECT 
@@ -225,6 +260,8 @@ FROM cte_spent_before_mem
 GROUP BY customer_id
 ORDER BY customer_id;
 ```
+</details>
+
 #### Output:
 |customer_id	|total_spent	|total_items|
 |:---------:|:------------:|:---------:|
@@ -234,7 +271,9 @@ ORDER BY customer_id;
 ***
 
 ###  9.  If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
-
+<details>
+  <summary>Click here for the solution</summary>
+  
 ```sql
 SELECT
   customer_id,
@@ -247,6 +286,7 @@ WHERE order_date >= join_date
 GROUP BY customer_id
 ORDER BY customer_id;
 ```
+</details>
 
 #### Output:
 |customer_id	|total_points|
@@ -265,6 +305,10 @@ Asssumption: Points is rewarded only after the customer joins in the membership 
 3. Conditions in WHERE clause
   	a. order_date <= '2021-01-31' -> Order must be placed before 31st January 2021
    	b. order_date >= join_date -> Points awarded to only customers with a membership	
+
+<details>
+  <summary>Click here for the solution</summary>
+  
 ```sql
 with program_last_day_cte as 
 (
@@ -289,6 +333,7 @@ AND				order_date >=join_date
 GROUP BY			s.customer_id
 ORDER BY			s.customer_id;
 ```
+</details>
 
 #### Output:
 |customer_id	|customer_points|
