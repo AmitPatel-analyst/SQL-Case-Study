@@ -7,7 +7,7 @@ View the case study [here](https://8weeksqlchallenge.com/case-study-2/)
   - [Introduction](#introduction)
   - [Datasets used](#datasets-used)
   - [Entity Relationship Diagram](#entity-relationship-diagram)
-  - [Data Cleaning](#Data Cleaning)
+  - [Data Cleaning](#data-cleaning)
   - [Case Study Solutions](#case-study-solutions)
   
 ## Introduction
