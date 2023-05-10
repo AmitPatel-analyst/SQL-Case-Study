@@ -191,4 +191,4 @@ go
 ![image](https://user-images.githubusercontent.com/120770473/229303691-cf27b9a1-9fa9-4efe-bb0e-b3c0872b715f.png)
 
 
-
+Click [Here](https://github.com/AmitPatel-analyst/SQL-Case-Study/tree/main) to move back to my another case study repositories! 
