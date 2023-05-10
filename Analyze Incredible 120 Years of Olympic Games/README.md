@@ -286,6 +286,6 @@ ORDER BY Games ;
 ```
 ![image](https://user-images.githubusercontent.com/120770473/224780942-3c62504d-2c93-422b-a57d-368b0a75bd40.png)
 
-
+CLick [Here](https://github.com/AmitPatel-analyst/SQL-Case-Study/tree/main) to move back to other case studies repository! 
 
 
