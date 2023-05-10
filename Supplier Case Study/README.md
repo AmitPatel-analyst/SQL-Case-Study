@@ -2,7 +2,7 @@
 
 1.	Create a DATABASE: SUPPLIER
 ### TABLES
-CREATE THE FOLLOWING THREE TABLES WITH SAME NAMES AND DATA TYPES AS PROVIDED BELOW:
+CREATE THE FOLLOWING THREE TABLES WITH THE SAME NAMES AND DATA TYPES AS PROVIDED BELOW:
 
 [Here are the scripts of these tables](https://github.com/AmitPatel-analyst/SQL-Case-Study/blob/main/Supplier%20Case%20Study/Supplier_Queries.sql)
 
@@ -160,3 +160,5 @@ SELECT	NAME AS PNAME,
          ;
 ```
 ![image](https://user-images.githubusercontent.com/120770473/229306743-b81328fa-5bac-413d-832d-138d98a32231.png)
+
+Click [Here](https://github.com/AmitPatel-analyst/SQL-Case-Study/tree/main) to move back to my another case study repositories! 
