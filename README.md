@@ -1,3 +1,3 @@
 # SQL-Case-Study
 
-In this repository, I have solved some good case studies using SQL language and provided some valuable insights.
+This Github repo showcases my SQL case studies, demonstrating proficiency in solving diverse business problems. Projects cover finance, healthcare and other sectors, and highlight my ability to analyze complex datasets through SQL queries, data manipulation, and visualization techniques.
