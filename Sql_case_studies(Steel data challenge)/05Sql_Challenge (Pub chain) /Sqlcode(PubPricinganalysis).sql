@@ -164,4 +164,12 @@ from	cte_avg_price a
 inner join cte_total_avg_price b
 on		a.country = b.country;
 
+
+Some of the key insights are-
+✔ The Red Lion Pub has the highest customers average rating of 4.67
+✔ The Red Lion Pub has sold the highest quantity of 55 Drinks and also has generated the highest sales amount of $ 532.66.
+✔ The overall average price per unit of beverages across all categories is highest for country United Kingdom and lowest for country Ireland.
+✔ The average price per unit of beverages is the highest for Whiskey in Ireland and the United Kingdom. And lowest for Beer in the United States.
+✔ The highest transactions were done on Tuesday and Wednesday and the lowest transaction was done on Thursday and Friday.
+	
 -------------------------------------------------------------
