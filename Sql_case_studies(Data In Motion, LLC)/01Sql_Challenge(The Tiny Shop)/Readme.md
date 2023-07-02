@@ -9,7 +9,9 @@ This case study originally uses PostgreSQL however the solution was done using S
 . Window Functions     
 . Joins    
 . Date time functions    
+. Median - PERCENTILE_CONT     
 . CTEs      
 
 ***
 ## Case Study Solutions
+Click [here](https://github.com/AmitPatel-analyst/SQL-Case-Study/blob/main/Sql_case_studies(Data%20In%20Motion%2C%20LLC)/01Sql_Challenge(The%20Tiny%20Shop)/PostgreSqlcode.sql)
