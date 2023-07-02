@@ -15,4 +15,4 @@ This case study originally uses PostgreSQL. To successfully answer all the quest
 . CTEs                         
 ***
 ## Case Study Solutions
-Click [here]
+Click [here](https://github.com/AmitPatel-analyst/SQL-Case-Study/blob/main/Sql_case_studies(Data%20In%20Motion%2C%20LLC)/02Sql_Challenge(Human%20Resources)/PostgreSqlCode.sql)
