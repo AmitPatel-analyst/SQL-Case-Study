@@ -1,8 +1,10 @@
+-- load the excel data into sql database named CS.
+
 use CS
 go
 
+	
 select * from [OYO].[Hotel_Sales];
-
 
 select * from [OYO].[City];
 
@@ -25,8 +27,8 @@ add rate float null;
 
 update [OYO].[Hotel_Sales]
 set rate = ROUND( case when no_of_rooms = 1 then 
-					Price/no_of_nights 
-				else Price/no_of_nights/no_of_rooms end,2) 
+		Price/no_of_nights 
+		else Price/no_of_nights/no_of_rooms end,2) 
 */
 
  select count(1) [total records]
@@ -123,15 +125,6 @@ order by 2;
 --done
 ---------------------------------------------------------------------------
 
-select distinct customer_id , date_of_booking
-from OYO.Hotel_Sales
-where customer_id in (
-					select distinct customer_id
-					from OYO.Hotel_Sales
-					where MONTH(date_of_booking) = 1
-					)
-and MONTH(date_of_booking) = 2;
-
 -- NEW CUSTOMERS ON JAN MONTH - 719
 -- REPEAT CUSTOMER ON FEB MONTH - 133
 -- NEW CUSTOMERS ON feb MONTH - 566
@@ -181,4 +174,3 @@ Insights:-
 
 4. The % cancellation Rate is high on all 9 cities except pune ,so Oyo should focus on finding reasons about cancellation.
  
-5.  
