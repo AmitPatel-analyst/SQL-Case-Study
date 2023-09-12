@@ -14,7 +14,9 @@ You can find the complete challenge here:https://8weeksqlchallenge.com/case-stud
   Danny was scrolling through his Instagram feed when something really caught his eye - “80s Retro Styling and Pizza Is The Future!”
   Danny was sold on the idea, but he knew that pizza alone was not going to help him get seed funding to expand his new Pizza Empire - so he had one more genius idea to combine with   it - he was going to Uberize it - and so Pizza Runner was launched!
   Danny started by recruiting “runners” to deliver fresh pizza from Pizza Runner Headquarters (otherwise known as Danny’s house) and also maxed out his credit card to pay freelance     developers to build a mobile app to accept orders from customers.
-  
+
+## Problem Statement  
+    
 ## Datasets used
 Key datasets for this case study
 - **runners** : The table shows the registration_date for each new runner
@@ -26,6 +28,19 @@ Key datasets for this case study
 
 ## Entity Relationship Diagram
 ![image](https://user-images.githubusercontent.com/120770473/236621181-4c34ea27-706f-4f02-bf1a-d4b8ec5b3ba4.png)
+
+## Case Study Question:
+                                                  A. Pizza Metrics
+1. How many pizzas were ordered?        
+2. How many unique customer orders were made?       
+3. How many successful orders were delivered by each runner?      
+4. How many of each type of pizza was delivered?     
+5. How many Vegetarian and Meatlovers were ordered by each customer?     
+6. What was the maximum number of pizzas delivered in a single order?     
+7. For each customer, how many delivered pizzas had at least 1 change and how many had no changes?     
+8. How many pizzas were delivered that had both exclusions and extras?     
+9. What was the total volume of pizzas ordered for each hour of the day?     
+10. What was the volume of orders for each day of the week?   
 
 ## Data Cleaning
 There are some known data issues with few tables. Data cleaning was performed and saved in temporary tables before attempting the case study.
@@ -43,8 +58,6 @@ There are some known data issues with few tables. Data cleaning was performed an
 
 Click [here](https://github.com/AmitPatel-analyst/SQL-Case-Study/blob/main/%238Weeksqlchallange/Case%20Study%20%23%202%20-%20Pizza%20Runner/0.%20Data%20Cleaning.md) to view the code of data cleaning task.
 
- **Note**: 
-- Solutions are coded in **Microsoft Sql Server**
  
 ## Case Study Solutions
 - [A. Pizza Metrics](https://github.com/AmitPatel-analyst/SQL-Case-Study/blob/main/%238Weeksqlchallange/Case%20Study%20%23%202%20-%20Pizza%20Runner/A.%20Pizza%20Metrics.md)
