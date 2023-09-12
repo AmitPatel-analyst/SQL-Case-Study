@@ -168,23 +168,19 @@ ORDER BY c.customer_id;
   <summary>Click here for solution</summary>
   
 ```sql
- SELECT
-  customer_id,
-  SUM(CASE WHEN c.exclusions <> ' ' AND
-      c.extras <> ' ' THEN 1 ELSE 0 END) AS both_change_in_pizza
+SELECT
+  count(r.order_id) as Order_had_bothexclusions_and_extras
 FROM updated_runner_orders r
-INNER JOIN Updated_customer_orders c
+inner JOIN Updated_customer_orders c
   ON r.order_id = c.order_id
-WHERE r.cancellation IS NULL
-OR r.cancellation NOT IN ('Restaurant Cancellation', 'Customer Cancellation')
-GROUP BY customer_id
-ORDER BY Customer_id
-; 
+WHERE r.cancellation IS NULL and c.exclusions <> ' ' AND
+      c.extras <> ' ';
 ```
 </details>
 
 #### Output:
-![image](https://user-images.githubusercontent.com/120770473/236624986-80cceae4-9e5b-4962-a6d1-564adec655d4.png)
+![image](https://github.com/AmitPatel-analyst/SQL-Case-Study/assets/120770473/8cb4cdba-2f0a-4628-8e2f-b6b4bc588d04)
+
 
 #### 9. What was the total volume of pizzas ORDERED for each hour of the day?
 <details>
@@ -212,16 +208,17 @@ ORDER BY 1;
 ```sql
 SELECT
   DATENAME(dw, order_time) AS Day_of_Week,
-  COUNT(1) AS Pizza_Ordered_Count,
-  ROUND(100 * COUNT(order_id) / SUM(COUNT(order_id)) OVER (), 2) AS 'Volume of pizzas ordered'
+  COUNT(1) AS Pizza_Ordered_Count
 FROM Updated_customer_orders
 GROUP BY DATENAME(dw, order_time)
-ORDER BY 2 DESC;  
+ORDER BY 2 DESC;
+
 ```
 </details>
 
 #### Output:
-![image](https://user-images.githubusercontent.com/120770473/236625466-1ac29973-64bf-44e8-8cc1-ac7b8f792ebb.png)
+![image](https://github.com/AmitPatel-analyst/SQL-Case-Study/assets/120770473/7ef0d3d5-41f4-4cce-acf4-7418ea0c5d01)
+
 
   ***
  Click [here]() to view the solution of B. Runner and Customer Experience
