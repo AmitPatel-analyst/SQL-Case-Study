@@ -59,6 +59,8 @@ There are some known data issues with few tables. Data cleaning was performed an
 Click [here](https://github.com/AmitPatel-analyst/SQL-Case-Study/blob/main/%238Weeksqlchallange/Case%20Study%20%23%202%20-%20Pizza%20Runner/0.%20Data%20Cleaning.md) to view the code of data cleaning task.
 
 # Insights
+
+                                                  A. Pizza Metrics
 ◼ Total Unique orders customers made were 10 and total 14 pizzas were ordered.      
 ◼ Runner 1 had Delivered highest number of pizzas , whereas Runner 3 had delivered Least.      
 ◼ Meatlovers pizza was delivered 9 times , whereas Vegetarian pizza was delivered 3 times only.      
