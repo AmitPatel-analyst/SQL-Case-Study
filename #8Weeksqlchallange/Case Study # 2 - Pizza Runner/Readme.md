@@ -1,8 +1,8 @@
 # :pizza: :runner:  Case Study #2: Pizza Runner 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/120770473/236620731-3809e43a-835d-4ef1-ac58-84c300de6856.png" alt="Image" width="450" height="450">
+<img src="https://user-images.githubusercontent.com/120770473/236620731-3809e43a-835d-4ef1-ac58-84c300de6856.png" alt="Image" width="650" height="650">
 
-View the case study [here](https://8weeksqlchallenge.com/case-study-2/)
+You can find the complete challenge here:https://8weeksqlchallenge.com/case-study-2/
 ## Table Of Contents
   - [Introduction](#introduction)
   - [Datasets used](#datasets-used)
@@ -41,7 +41,7 @@ There are some known data issues with few tables. Data cleaning was performed an
 - In the duration column, there are null values. The 'minutes', 'mins' 'minute' must be stripped
 - In the cancellation column, there are blank spaces and null values.
 
-Click [here](https://github.com/AmitPatel-analyst/SQL-Case-Study/blob/main/%238Weeksqlchallange/Case%20Study%20%23%202%20-%20Pizza%20Runner/0.%20Data%20Cleaning.md) to view the data cleaning peformed.
+Click [here](https://github.com/AmitPatel-analyst/SQL-Case-Study/blob/main/%238Weeksqlchallange/Case%20Study%20%23%202%20-%20Pizza%20Runner/0.%20Data%20Cleaning.md) to view the code of data cleaning task.
 
  **Note**: 
 - Solutions are coded in **Microsoft Sql Server**
