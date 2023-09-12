@@ -147,7 +147,7 @@ SELECT
   c.customer_id,
   SUM(CASE WHEN c.exclusions <> ' ' OR
       c.extras <> ' ' THEN 1 ELSE 0 END) AS Changes,
-  SUM(CASE WHEN c.exclusions = ' ' OR
+  SUM(CASE WHEN c.exclusions = ' ' AND
       c.extras = ' ' THEN 1 ELSE 0 END) AS No_changes
 FROM updated_runner_orders r
 INNER JOIN Updated_customer_orders c
@@ -160,7 +160,8 @@ ORDER BY c.customer_id;
 </details>
 
 #### Output:
-![image](https://user-images.githubusercontent.com/120770473/236624826-0f5a3882-e088-417c-a24f-abcd8021ccfe.png)
+![image](https://github.com/AmitPatel-analyst/SQL-Case-Study/assets/120770473/087d505a-68be-4e01-8e06-7410a8b52db4)
+
 
 #### 8. How many pizzas were delivered that had both exclusions and extras?
 <details>
