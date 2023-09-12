@@ -58,6 +58,15 @@ There are some known data issues with few tables. Data cleaning was performed an
 
 Click [here](https://github.com/AmitPatel-analyst/SQL-Case-Study/blob/main/%238Weeksqlchallange/Case%20Study%20%23%202%20-%20Pizza%20Runner/0.%20Data%20Cleaning.md) to view the code of data cleaning task.
 
- 
+# Insights
+◼ Total Unique orders customers made were 10 and total 14 pizzas were ordered.
+◼ Runner 1 had Delivered highest number of pizzas , whereas Runner 3 had delivered Least.
+◼ Meatlovers pizza was delivered 9 times , whereas Vegetarian pizza was delivered 3 times only.
+◼ Customer 101,102,103,105 had ordered Vegetarian pizza only 1 time, whereas Customer 104 had ordered Meatlovers pizza 3 times.
+◼ Customer 101,102 liked his/her pizza as per the original recipe, whereas customer 103,104,105 had their own preference for pizza toppings and requested atleast 1 change on their pizza.
+◼ Only One customer had ordered 1 pizza having both exclusions and extra toppings.
+◼ Highest number of pizza ordered were at 1:00 pm , 6:00 pm , 9:00 pm & 11:00 pm, whereas Least number of pizza were ordered at 11:00 am  & 7:00 pm.
+◼ On Saturday and Wednesday highest number of pizza were ordered , whereas on Friday least number of pizza were ordered
+
 ## Case Study Solutions
 - [A. Pizza Metrics](https://github.com/AmitPatel-analyst/SQL-Case-Study/blob/main/%238Weeksqlchallange/Case%20Study%20%23%202%20-%20Pizza%20Runner/A.%20Pizza%20Metrics.md)
