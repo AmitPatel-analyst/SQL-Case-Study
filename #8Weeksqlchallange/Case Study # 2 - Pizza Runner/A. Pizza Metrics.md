@@ -187,19 +187,20 @@ WHERE r.cancellation IS NULL and c.exclusions <> ' ' AND
   <summary>Click here for solution</summary>
   
 ```sql
+
 SELECT
   DATEPART(HOUR, order_time) AS Hour,
-  COUNT(1) AS Pizza_Ordered_Count,
-  ROUND(100 * COUNT(order_id) / SUM(COUNT(order_id)) OVER (), 2) AS 'Volume of pizzas ordered'
+  COUNT(1) AS Pizza_Ordered_Count
 FROM Updated_customer_orders
 WHERE order_time IS NOT NULL
 GROUP BY DATEPART(HOUR, order_time)
-ORDER BY 1;  
+ORDER BY 1;
 ```
 </details>
 
 #### Output:
-![image](https://user-images.githubusercontent.com/120770473/236625238-05630624-73fb-4b57-b545-e0bd327ad9d1.png)
+![image](https://github.com/AmitPatel-analyst/SQL-Case-Study/assets/120770473/a15e261f-a199-4f54-9c6f-04550d2b9985)
+
 
 #### 10. What was the volume of orders for each day of the week?
 <details>
