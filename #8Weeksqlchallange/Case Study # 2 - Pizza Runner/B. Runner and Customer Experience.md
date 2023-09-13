@@ -129,21 +129,6 @@ FROM updated_runner_orders;
 #### Output:
 ![image](https://github.com/AmitPatel-analyst/SQL-Case-Study/assets/120770473/4d75bc2c-b69a-48bb-8bc0-3d1ee1aa4502)
 
-
-###  5.	What was the difference between the longest and shortest delivery times for all orders?
-<details>
-  <summary>Click here for solution</summary>
-  
-```sql
-SELECT
-	 MAX(duration) - MIN(duration) AS Time_span
-FROM updated_runner_orders;
-```
-</details>
-
-#### Output:
-![image](https://github.com/AmitPatel-analyst/SQL-Case-Study/assets/120770473/ae3c6712-e91f-43c5-b54c-2de9fd70dec6)
-
 ◻ The difference between longest (40 minutes) and shortest ( 10 minutes) delivery time for all orders is 30 minutes.
 
 ### 6.What was the average speed for each runner for each delivery and do you notice any trend for these values?
@@ -176,6 +161,13 @@ order by runner_id;
 
 #### Output:
 ![image](https://github.com/AmitPatel-analyst/SQL-Case-Study/assets/120770473/d955008b-47ae-4b57-a2db-dc10b924e4b4)
-◻ While delivering pizza , an speed for runner_id 1 was varied from 37.5 kmph to 60 kmph.
-◻ An speed for runner_id 2 has varied from 35.1 km h to 93.6 mph which is abnormal , so danny has to lookat the matter  seriously on runner_id 2.
-◻ An speed for runner_id 3 is 40 kmph.
+
+◻ While delivering pizza , an speed for runner_id 1 was varied from 37.5 kmph to 60 kmph.     
+◻ An speed for runner_id 2 has varied from 35.1 km h to 93.6 mph which is abnormal , so danny has to lookat the matter  seriously on runner_id 2.     
+◻ An speed for runner_id 3 is 40 kmph.    
+
+### 7.	What is the successful delivery percentage for each runner?
+<details>
+  <summary>Click here for solution</summary>
+  
+```sql
