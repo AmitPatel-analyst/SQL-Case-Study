@@ -112,4 +112,24 @@ order by  runner_id;
 ![image](https://github.com/AmitPatel-analyst/SQL-Case-Study/assets/120770473/62ee549d-7e6b-4f54-88fa-6548fbc00393)
 
 
+###  5.	What was the difference between the longest and shortest delivery times for all orders?
+<details>
+  <summary>Click here for solution</summary>
+  
+```sql
+SELECT
+	 MAX(duration) - MIN(duration) AS Time_span
+FROM updated_runner_orders;
+```
+</details>
+
+#### Output:
+![image](https://github.com/AmitPatel-analyst/SQL-Case-Study/assets/120770473/4d75bc2c-b69a-48bb-8bc0-3d1ee1aa4502)
+
+
+###  5.	What was the difference between the longest and shortest delivery times for all orders?
+<details>
+  <summary>Click here for solution</summary>
+  
+```sql
 
