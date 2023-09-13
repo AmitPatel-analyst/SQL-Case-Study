@@ -92,6 +92,8 @@ order by	pizza_order_count;
 #### Output:
 ![image](https://github.com/AmitPatel-analyst/SQL-Case-Study/assets/120770473/5bc3bf1c-e6ab-44ee-a15f-6f6c2659b1f2)
 
+◻ On average , An order with single pizza took 12 minutes to prepare. whereas an order of 2 pizzas took total 18 minutes ,so 9 minutes per pizza is an ultimate efficiency rate.
+
 
 ###  4.	What was the AVERAGE DISTANCE travelled for EACH RUNNER?
 <details>
@@ -111,6 +113,7 @@ order by  runner_id;
 #### Output:
 ![image](https://github.com/AmitPatel-analyst/SQL-Case-Study/assets/120770473/62ee549d-7e6b-4f54-88fa-6548fbc00393)
 
+◻ On average , A runner_id 3 had least distance travelled, whereas A runner_id 2 had highest distance travelled. 
 
 ###  5.	What was the difference between the longest and shortest delivery times for all orders?
 <details>
@@ -132,4 +135,47 @@ FROM updated_runner_orders;
   <summary>Click here for solution</summary>
   
 ```sql
+SELECT
+	 MAX(duration) - MIN(duration) AS Time_span
+FROM updated_runner_orders;
+```
+</details>
 
+#### Output:
+![image](https://github.com/AmitPatel-analyst/SQL-Case-Study/assets/120770473/ae3c6712-e91f-43c5-b54c-2de9fd70dec6)
+
+◻ The difference between longest (40 minutes) and shortest ( 10 minutes) delivery time for all orders is 30 minutes.
+
+### 6.What was the average speed for each runner for each delivery and do you notice any trend for these values?
+<details>
+  <summary>Click here for solution</summary>
+  
+```sql
+with order_count as  
+(
+	select	order_id,order_time,count(pizza_id) as pizza_order_count
+	from	Updated_customer_orders
+	group by order_id,order_time
+), speed as
+(	select	
+			c.order_id
+			,r.runner_id
+			,c.pizza_order_count
+			,round((60* r.distance/ r.duration),2) as speed_kmph
+	from	updated_runner_orders r
+	join	order_count c
+	on		r.order_id = c.order_id
+	where	cancellation is null
+	
+)
+select runner_id,pizza_order_count,speed_kmph,avg(speed_kmph) over(partition by runner_id) as speed_avg
+from speed
+order by runner_id;
+```
+</details>
+
+#### Output:
+![image](https://github.com/AmitPatel-analyst/SQL-Case-Study/assets/120770473/d955008b-47ae-4b57-a2db-dc10b924e4b4)
+◻ While delivering pizza , an speed for runner_id 1 was varied from 37.5 kmph to 60 kmph.
+◻ An speed for runner_id 2 has varied from 35.1 km h to 93.6 mph which is abnormal , so danny has to lookat the matter  seriously on runner_id 2.
+◻ An speed for runner_id 3 is 40 kmph.
