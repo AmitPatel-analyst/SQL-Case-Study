@@ -222,4 +222,4 @@ ORDER BY 2 DESC;
 
 
   ***
- Click [here]() to view the solution of B. Runner and Customer Experience
+ Click [here](https://github.com/AmitPatel-analyst/SQL-Case-Study/blob/main/%238Weeksqlchallange/Case%20Study%20%23%202%20-%20Pizza%20Runner/B.%20Runner%20and%20Customer%20Experience.md) to view the solution of B. Runner and Customer Experience
