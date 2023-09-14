@@ -98,3 +98,35 @@ with Get_toppingid as
   <summary>Click here for solution</summary>
   
 ```sql
+with cte as
+	(
+	select c.order_id , p.pizza_name , c.exclusions , c.extras
+			,topp1.topping_name as exclude , topp2.topping_name as extra
+	from customer_orders_new as c
+	inner join pizza_runner.[pizza_names] as p
+	on c.pizza_id = p.pizza_id
+	left join pizza_runner.[pizza_toppings] as topp1
+	on topp1.topping_id = c.exclusions 
+	left join pizza_runner.[pizza_toppings] as topp2
+	on topp2.topping_id = c.extras
+	)
+
+	select order_id , pizza_name,
+	case when pizza_name is not null and exclude is null and extra is null then pizza_name
+	     when pizza_name is not null and exclude is not null and extra is not null then concat(pizza_name,' - ','Exclude ',exclude,' - ','Extra ',extra)
+		 when pizza_name is not null and exclude is null and extra is not null then concat(pizza_name,' - ','Extra ',extra)
+		 when pizza_name is not null and exclude is not null and extra is null then concat(pizza_name,' - ','Exclude ',exclude)
+	 end as order_item
+	from cte
+	order by order_id;
+```
+</details>
+
+#### Output:
+![image](https://github.com/AmitPatel-analyst/SQL-Case-Study/assets/120770473/ef04e7a2-5294-4c9f-af47-7db5878dbfcb)
+
+###  5. Generate an alphabetically ordered comma separated ingredient list for each pizza order from the customer_orders table
+<details>
+  <summary>Click here for solution</summary>
+  
+```sql
