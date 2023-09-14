@@ -11,13 +11,10 @@
 7. What is the successful delivery percentage for each runner?
 
 ***
-Total Tables are following:        
-  select * from updated_runner_orders;    
-	select * from Updated_customer_orders;    
-  SELECT * FROM pizza_runner.[pizza_toppings];    
-  SELECT * FROM pizza_runner.[pizza_recipes];   
-  SELECT * FROM pizza_runner.[pizza_names];   
-  select * from pizza_runner.runners;
+Total Tables are following:               
+  	select * from updated_runner_orders;       
+	select * from Updated_customer_orders;       
+	select * from pizza_runner.runners;    
   
 ###  1. How many runners signed up for each 1 week period? (i.e. week starts 2021-01-01)
 <details>
