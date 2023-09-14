@@ -171,3 +171,14 @@ order by runner_id;
   <summary>Click here for solution</summary>
   
 ```sql
+select	runner_id,
+		count(pickup_time) as delivered_orders,
+		count(order_id) as total_orders,
+		round(100*count(pickup_time)/count(order_id),0) as delivery_pct
+from updated_runner_orders
+group by runner_id;
+```
+</details>
+
+#### Output:
+![image](https://github.com/AmitPatel-analyst/SQL-Case-Study/assets/120770473/001c40cd-5400-4fc3-a4a0-75d90754304d)
