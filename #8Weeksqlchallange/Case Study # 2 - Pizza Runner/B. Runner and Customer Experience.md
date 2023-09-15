@@ -89,8 +89,6 @@ order by	pizza_order_count;
 #### Output:
 ![image](https://github.com/AmitPatel-analyst/SQL-Case-Study/assets/120770473/5bc3bf1c-e6ab-44ee-a15f-6f6c2659b1f2)
 
-◻ On average , An order with single pizza took 12 minutes to prepare. whereas an order of 2 pizzas took total 18 minutes ,so 9 minutes per pizza is an ultimate efficiency rate.
-
 
 ###  4.	What was the AVERAGE DISTANCE travelled for EACH RUNNER?
 <details>
@@ -110,8 +108,6 @@ order by  runner_id;
 #### Output:
 ![image](https://github.com/AmitPatel-analyst/SQL-Case-Study/assets/120770473/62ee549d-7e6b-4f54-88fa-6548fbc00393)
 
-◻ On average , A runner_id 3 had least distance travelled, whereas A runner_id 2 had highest distance travelled. 
-
 ###  5.	What was the difference between the longest and shortest delivery times for all orders?
 <details>
   <summary>Click here for solution</summary>
@@ -125,8 +121,6 @@ FROM updated_runner_orders;
 
 #### Output:
 ![image](https://github.com/AmitPatel-analyst/SQL-Case-Study/assets/120770473/4d75bc2c-b69a-48bb-8bc0-3d1ee1aa4502)
-
-◻ The difference between longest (40 minutes) and shortest ( 10 minutes) delivery time for all orders is 30 minutes.
 
 ### 6.What was the average speed for each runner for each delivery and do you notice any trend for these values?
 <details>
@@ -159,10 +153,6 @@ order by runner_id;
 #### Output:
 ![image](https://github.com/AmitPatel-analyst/SQL-Case-Study/assets/120770473/d955008b-47ae-4b57-a2db-dc10b924e4b4)
 
-◻ While delivering pizza , an speed for runner_id 1 was varied from 37.5 kmph to 60 kmph.     
-◻ An speed for runner_id 2 has varied from 35.1 km h to 93.6 mph which is abnormal , so danny has to lookat the matter  seriously on runner_id 2.     
-◻ An speed for runner_id 3 is 40 kmph.    
-
 ### 7.	What is the successful delivery percentage for each runner?
 <details>
   <summary>Click here for solution</summary>
@@ -179,3 +169,14 @@ group by runner_id;
 
 #### Output:
 ![image](https://github.com/AmitPatel-analyst/SQL-Case-Study/assets/120770473/001c40cd-5400-4fc3-a4a0-75d90754304d)
+
+## Insights
+1. On average , An order with single pizza took 12 minutes to prepare. whereas an order of 2 pizzas took total 18 minutes ,so 9 minutes per pizza is an ultimate efficiency rate.
+2. On average , A runner_id 3 had least distance travelled, whereas A runner_id 2 had highest distance travelled.
+3. The difference between longest (40 minutes) and shortest ( 10 minutes) delivery time for all orders is 30 minutes.
+4. While delivering pizza , an speed for runner_id 1 was varied from 37.5 kmph to 60 kmph.     
+5. An speed for runner_id 2 has varied from 35.1 km h to 93.6 mph which is abnormal , so danny has to lookat the matter  seriously on runner_id 2.     
+6. An speed for runner_id 3 is 40 kmph.    
+
+
+ Click [here](https://github.com/AmitPatel-analyst/SQL-Case-Study/blob/main/%238Weeksqlchallange/Case%20Study%20%23%202%20-%20Pizza%20Runner/C.%20Ingredient%20Optimisation.md) to view the solution of C. Ingredient Optimisation
