@@ -10,18 +10,17 @@
   ◼ Meat Lovers - Exclude Beef              
   ◼ Meat Lovers - Extra Bacon            
   ◼ Meat Lovers - Exclude Cheese, Bacon - Extra Mushroom, Peppers              
-5. Generate an alphabetically ordered comma separated ingredient list for each pizza order from the customer_orders table and add a 2x in front of any relevant ingredients   
- ◼ For example: "Meat Lovers: 2xBacon, Beef, ... , Salami"     
-6. What is the total quantity of each ingredient used in all delivered pizzas sorted by most frequent first?
 
 ***
 Total Tables are following:        
-  select * from updated_runner_orders;    
+  	select * from updated_runner_orders;    
 	select * from Updated_customer_orders;    
-  SELECT * FROM pizza_runner.[pizza_toppings];    
-  SELECT * FROM pizza_runner.[pizza_recipes];   
-  SELECT * FROM pizza_runner.[pizza_names];   
-  select * from pizza_runner.runners;
+  	SELECT * FROM pizza_runner.[pizza_toppings];    
+  	SELECT * FROM pizza_runner.[pizza_recipes];   
+  	SELECT * FROM pizza_runner.[pizza_names];   
+  	select * from pizza_runner.runners
+	select * from customer_orders_new;   
+ 
 
 ###  1. What are the standard ingredients for each pizza?
 <details>
@@ -125,8 +124,7 @@ with cte as
 #### Output:
 ![image](https://github.com/AmitPatel-analyst/SQL-Case-Study/assets/120770473/ef04e7a2-5294-4c9f-af47-7db5878dbfcb)
 
-###  5. Generate an alphabetically ordered comma separated ingredient list for each pizza order from the customer_orders table
-<details>
-  <summary>Click here for solution</summary>
-  
-```sql
+### Insights Gathered
+1. The most commonly added extra was "Bacon".
+2. The most commonly added exclusion was "Cheese".
+   
