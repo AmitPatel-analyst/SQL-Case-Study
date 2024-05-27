@@ -13,4 +13,12 @@ I used various SQL functions such as :
 ✅ Group by, Order by, Where         
 ✅ Aggregate functions Sum, Count                
 ✅ Date functions Datepart , Datename, Datediff               
-✅ Window functions(DENSE_RANK, LAG)                    
+✅ Window functions(DENSE_RANK, LAG) 
+                   
+Some of the key insights are :
+1) Allocate additional marketing resources and promotional campaigns to the top 5 cities to capitalize on their high spending patterns.
+2) Plan targeted promotional offers or campaigns during the highest spending months for each card type to encourage increased spending.
+3) Investigate the reasons behind the low spending in the identified city and consider targeted marketing strategies or partnerships to increase spending in that location.
+4) Allocate additional staffing or resources in the city with the highest spend-to-transaction ratio during weekends to capitalize on increased spending opportunities.
+5) Identify market potential and consider targeted marketing efforts in the city with the fastest transaction growth to capture new customers and increase business growth.
+6) Develop specific product or service offerings targeted towards females based on their significant contribution to spending in specific expense categories.
