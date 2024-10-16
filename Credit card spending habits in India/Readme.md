@@ -22,3 +22,20 @@ Some of the key insights are :
 4) Allocate additional staffing or resources in the city with the highest spend-to-transaction ratio during weekends to capitalize on increased spending opportunities.
 5) Identify market potential and consider targeted marketing efforts in the city with the fastest transaction growth to capture new customers and increase business growth.
 6) Develop specific product or service offerings targeted towards females based on their significant contribution to spending in specific expense categories.
+
+## Order of execution of SQL queries
+
+```
+FROM – the database gets the data from tables in FROM clause and if necessary performs the JOINs,
+WHERE – the data are filtered with conditions specified in WHERE clause,
+GROUP BY – the data are grouped by with conditions specified in WHERE clause,
+aggregate functions – the aggregate functions are applied to the groups created in the GROUP BY phase,
+HAVING – the groups are filtered with the given condition,
+window functions,
+SELECT – the database selects the given columns,
+DISTINCT – repeated values are removed,
+UNION/INTERSECT/EXCEPT – the database applies set operations,
+ORDER BY – the results are sorted,
+OFFSET – the first rows are skipped,
+LIMIT/FETCH/TOP – only the first rows are selected
+```
