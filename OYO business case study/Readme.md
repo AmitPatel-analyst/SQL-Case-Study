@@ -29,3 +29,20 @@ Insights:-
 ***
 ## Case Study Solutions
 Click [here](https://github.com/AmitPatel-analyst/SQL-Case-Study/blob/main/OYO%20business%20case%20study/SqlCode_OYO_business.sql)
+
+## Order of execution of SQL queries
+
+```
+FROM – the database gets the data from tables in FROM clause and if necessary performs the JOINs,
+WHERE – the data are filtered with conditions specified in WHERE clause,
+GROUP BY – the data are grouped by with conditions specified in WHERE clause,
+aggregate functions – the aggregate functions are applied to the groups created in the GROUP BY phase,
+HAVING – the groups are filtered with the given condition,
+window functions,
+SELECT – the database selects the given columns,
+DISTINCT – repeated values are removed,
+UNION/INTERSECT/EXCEPT – the database applies set operations,
+ORDER BY – the results are sorted,
+OFFSET – the first rows are skipped,
+LIMIT/FETCH/TOP – only the first rows are selected
+```
